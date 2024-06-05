@@ -2,10 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\homeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [homeController::class, 'index']);
 
 Route::get('/about', function () {
     return view('abou   ');
